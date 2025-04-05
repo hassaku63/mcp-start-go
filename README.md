@@ -10,7 +10,7 @@ Example project for the MCP Server
     "mcp-server-start": {
       "name": "mcp-server-start",
       "description": "this is a test server",
-      "command": "${PATH_TO_BINARY}/mcp_start",
+      "command": "${ABSOLUTE_PATH_TO_BINARY_DIR}/mcp_start",
       "args": []
     }
   }
