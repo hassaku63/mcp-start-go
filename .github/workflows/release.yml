@@ -27,9 +27,18 @@ jobs:
 
       - name: Build
         run: |
-          GOOS=${{ matrix.os == 'macos-latest' && 'darwin' || matrix.os == 'windows-latest' && 'windows' || 'linux' }} \
-          GOARCH=${{ matrix.arch }} \
           make build
+
+      - name: Rename binary
+        run: |
+          mkdir -p dist
+          if [[ "${{ matrix.os }}" == "macos-latest" ]]; then
+            mv ./build/mcp_start ./dist/mcp-start-darwin-${{ matrix.arch }}
+          elif [[ "${{ matrix.os }}" == "windows-latest" ]]; then
+            mv ./build/mcp_start.exe ./dist/mcp-start-windows-${{ matrix.arch }}.exe
+          elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
+            mv ./build/mcp_start ./dist/mcp-start-linux-${{ matrix.arch }}
+          fi
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
