@@ -22,3 +22,7 @@ If you choose to do so, please proceed at your own risk. We shall not be held li
   }
 }
 ```
+
+# See also
+
+- Blog post: [StdioTransport を使ったクロスプラットフォームな MCP Server を Go で実装して、Cline から呼び出してみる](https://blog.serverworks.co.jp/2025/04/07/121500)
