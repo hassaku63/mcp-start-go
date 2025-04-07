@@ -16,7 +16,7 @@ If you choose to do so, please proceed at your own risk. We shall not be held li
     "mcp-server-start": {
       "name": "mcp-server-start",
       "description": "this is a test server",
-      "command": "${ABSOLUTE_PATH_TO_BINARY_DIR}/mcp_start",
+      "command": "${ABSOLUTE_PATH_TO_YOUR_DOWNLOAD}",
       "args": []
     }
   }
